@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buying Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Default styles */
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      margin-bottom: 20px;
+    }
+    .navbar-logo{
+      color: hsl(var(--hue), 24%, 32%);
+
+    }
+
+    .card {
+      max-width: 400px;
+      margin: 0 auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-img-top {
+      height: 300px;
+      object-fit: center;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      margin-bottom: 20px;
+    }
+
+    #buyBtn {
+      display: block;
+      width: 100%;
+    }
+
+    footer {
+      margin-top: 50px;
+      background-color: #333;
+      padding: 20px;
+      color: #fff;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #333;
+      color: #f8f9fa;
+    }
+
+    body.dark-mode header.navbar {
+      background-color: #212529;
+    }
+
+    body.dark-mode .card {
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    body.dark-mode .card-body {
+      background-color: #212529;
+    }
+
+    body.dark-mode .card-title,
+    body.dark-mode .card-text,
+    body.dark-mode footer {
+      color: #f8f9fa;
+    }
+
+    /* Custom styles */
+    .dark-mode-toggle {
+      width: 16px;
+      height: 16px;
+    }
+ 
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="/favicon.png" alt="Logo" class="navbar-logo">
+        Plantex
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <button id="modeToggleBtn" class="btn btn-link ml-auto">
+        <img src="/night-mode.png" alt="Toggle Dark Mode" class="dark-mode-toggle">
+      </button>
+    </nav>
+  </header>
+
+  <main class="container mt-4">
+    <h1>Plant Details</h1>
+    <div class="card">
+      <img src="product3.png" class="card-img-top" alt="Plant Image">
+      <div class="card-body">
+        <h5 class="card-title">Aloe Vera Plant</h5>
+        <p class="card-text">The Snake Plant is a popular houseplant known for its hardiness and air-purifying qualities.</p>
+        <p class="card-text">Price: 1200INR</p>
+        <button id="buyBtn" class="btn btn-primary"><a href="file:///C:/Users/ELCOT/Desktop/new%20web/responsive-plants-website/billing.html" >BUY NOW</a></button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="mt-4 text-center">
+    <p>&copy; 2023 Plant Shop. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Add your custom JavaScript here
+    document.getElementById('buyBtn').addEventListener('click', function() {
+      alert('DO YOU WANT PROCEED!');
+    });
+
+    // Toggle between dark and light mode
+    function toggleDarkMode() {
+      var body = document.body;
+      body.classList.toggle('dark-mode');
+    }
+
+    // Button click event listener
+    document.getElementById('modeToggleBtn').addEventListener('click', function() {
+      toggleDarkMode();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+ 
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .signup-container {
+      max-width: 400px;
+      margin: 0 auto;
+      margin-top: 100px;
+      padding: 20px;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      background-color: #ffffff;
+    }
+
+    .signup-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    .form-control {
+      border-radius: 5px;
+    }
+
+    .btn-signup {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+        <a href="#" class="nav__logo">
+            <i class="ri-leaf-line nav__logo-icon"></i> Plantex
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link active-link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#products" class="nav__link">Products</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#faqs" class="nav__link">FAQs</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link">Contact Us</a>
+                </li>
+            </ul>
+
+            <div class="nav__close" id="nav-close">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+
+        <div class="nav__btns">
+            <!-- Theme change button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+  <header class="header" id="header">
+    <!-- Navigation menu -->
+  </header>
+
+  <div class="container">
+    <div class="signup-container">
+      <div id="signup-form">
+        <h2>Sign Up</h2>
+        <form action=" " method="post">
+          <div class="form-group">
+            <label for="signup-name">Name</label>
+            <input type="text" name="name" class="form-control" id="signup-name" placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" name="email" class="form-control" id="signup-email" placeholder="Enter your email">
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" name="pass" class="form-control" id="signup-password" placeholder="Enter your password">
+          </div>
+          <button type="submit" class="btn btn-primary btn-signup" formaction="http://localhost:3000/save">Sign Up</button>
+        </form>
+        <p class="text-center mt-3">Already have an account? <a href="#" onclick="toggleForm('signin-form')">Sign In</a></p>
+      </div>
+
+      <div id="signin-form" style="display: none;">
+        <h2>Sign In</h2>
+        <form action=" " method="post">
+          <div class="form-group">
+            <label for="signin-email">Email</label>
+            <input type="email" name="email" class="form-control" id="signin-email" placeholder="Enter your email">
+          </div>
+          <div class="form-group">
+            <label for="signin-password">Password</label>
+            <input type="password" name="pass" class="form-control" id="signin-password" placeholder="Enter your password">
+          </div>
+          <button type="submit" class="btn btn-primary btn-signup" formaction="http://localhost:3000/login">Sign In</button>
+        </form>
+        <p class="text-center mt-3">Don't have an account? <a href="#" onclick="toggleForm('signup-form')">Sign Up</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function toggleForm(formId) {
+      document.getElementById('signup-form').style.display = (formId === 'signup-form') ? 'block' : 'none';
+      document.getElementById('signin-form').style.display = (formId === 'signin-form') ? 'block' : 'none';
+    }
+  </script>
+</body>
+
+</html>
