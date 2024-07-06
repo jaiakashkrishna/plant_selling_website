@@ -26,15 +26,3 @@ db.users.find({ "pass": pass, "email": email },
         });
 }
 
-exports.saveUser = function(pass,name, email, response) {
-console.log('Saving user to mongo');
-db.users.insert({ "pass": pass, "name": name, "email": email },
-function(err, saved) 
-{
-	if (err || !saved)
-		console.log(err);
-	else
-		response.write("User Saved");
-		response.end();
-	});
-}
